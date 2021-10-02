@@ -38,7 +38,8 @@ $ uvicorn main:app --reload
 ## GCP 部署
 ##### 新增專案後進入 Cloud Shell ，先創建一個虛擬環境試 Work。
 ```
-virtualenv env
+# virtualenv env
+virtualenv -p python3 env
 source env/bin/activate
 pip install -r requirements.txt
 gunicorn -w 4 -k uvicorn.workers.UvicornWorker main:app
